@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudConnect | Configurações</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>CloudConnect</h1>
+        <p>Configurações da API Airtable</p>
+
+        <section class="form-section">
+            <h2>Configurar API Airtable</h2>
+            <form id="settings-form">
+                <div class="input-group">
+                    <label for="airtable-pat">Personal Access Token (PAT)</label>
+                    <input type="text" id="airtable-pat" name="airtable-pat" placeholder="pat..." required>
+                    <small>Seu token de acesso pessoal do Airtable</small>
+                </div>
+                <div class="input-group">
+                    <label for="airtable-base-id">Base ID</label>
+                    <input type="text" id="airtable-base-id" name="airtable-base-id" placeholder="app..." required>
+                    <small>O ID da sua base no Airtable</small>
+                </div>
+                <button type="submit">Salvar Configurações</button>
+            </form>
+            <div id="settings-message" class="message"></div>
+        </section>
+
+        <section class="list-section">
+            <h2>Configurações Atuais</h2>
+            <div id="current-settings">
+                <p><strong>PAT:</strong> <span id="current-pat">Não configurado</span></p>
+                <p><strong>Base ID:</strong> <span id="current-base-id">Não configurado</span></p>
+            </div>
+            <button id="clear-settings" class="delete-btn" style="width: auto; margin-top: 15px;">Limpar Configurações</button>
+        </section>
+
+        <section class="form-section">
+            <h2>Navegação</h2>
+            <a href="index.html" style="display: inline-block; background-color: #4CAF50; color: white; padding: 12px 20px; text-decoration: none; border-radius: 6px; margin-right: 10px;">Voltar para Clientes</a>
+        </section>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
